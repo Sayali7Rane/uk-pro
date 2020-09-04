@@ -1,0 +1,15 @@
+show databases;
+use userdb;
+create table regdatabase
+(
+username varchar(30),
+password varchar(30),
+email varchar(30),
+mobile varchar(30),
+);
+
+
+insert into regdatabase values
+
+
+("seema","1234",sayali@gmail.com,9011);
