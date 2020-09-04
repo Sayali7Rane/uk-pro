@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh">
+    <!-- Left Block -->
+    <div class="col bg-success d-flex flex-column justify-content-center align-items-center">
+      <div>
+        <fa-icon [icon]="faLeaf" style="font-size: 100px"></fa-icon>
+      </div>
+      <div class="  h1   " style="color:white">WEBSITE FOR FARMERS</div>
+      <div class="h6">
+        WELCOME!
+      </div>
+    </div>
+
+
+    <!-- Right Block-->
+    <div class="col bg-light d-flex flex-column justify-content-center align-items-center" [formGroup]="fbFormGroup">
+      <div class="alert alert-primary" role="alert" *ngIf="uiInvalidCredential">
+        A simple danger alert—check it out!
+      </div>
+
+      <div class="h2" style="padding:20px;">LOGIN </div>
+
+      <div>
+        <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
+      </div>
+
+      <div class="mt-1 margin-bottom:10px margin-bottom:10px">
+        <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" />
+      </div>
+
+      <button class="btn btn-sm btn-success mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">
+        Login Here
+      </button>
+
+      <a routerLink="/register">Register Here</a>
+    </div>
+  </div>
+</div>
